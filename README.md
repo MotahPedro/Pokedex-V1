@@ -14,3 +14,5 @@
 </p>
 
 ## O site tambem é totalmente responsivo📱.
+
+## De uma olhada. **LINK**:https://motahpedro.github.io/Pokedex-V1/
