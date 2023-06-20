@@ -137,4 +137,8 @@ main{
         width: 50%;
         left: 75.5%;
     }
+    .button:active {
+        box-shadow: inset -2px 2px 0 #222;
+        font-size: 0.2rem;
+    }
 }
