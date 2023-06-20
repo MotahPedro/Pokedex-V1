@@ -6,6 +6,7 @@ const form = document.querySelector(".form")
 const input = document.querySelector(".input_search")
 
 let currentPokemonNumber = 1
+let originalImageUrl = ''
 
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
@@ -29,6 +30,8 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
 
         input.value=""
+
+        originalImageUrl = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
     } else {
         pokemonImage.style.display = 'none'
         pokemonName.innerHTML = "Nada :("
@@ -53,14 +56,21 @@ async function proximo(){
 
 async function anterior(){
     const currentNumber = parseInt(pokemonNumber.innerHTML)
-    const prevpokemonNumber = currentNumber - 1
-    renderPokemon(prevpokemonNumber.toString())
+    if(currentNumber > 1){
+        const prevpokemonNumber = currentNumber - 1
+        renderPokemon(prevpokemonNumber.toString())
+    }
 }
 
 async function shiny(pokemon) {
-    const currentNumber = parseInt(pokemonNumber.innerHTML)
-    const shinyData = await fetchPokemon(currentNumber.toString());
-    if (shinyData) {
-        pokemonImage.src = shinyData['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
+    
+    if (pokemonImage.src !== originalImageUrl){
+        pokemonImage.src = originalImageUrl
+    } else {
+        const currentNumber = parseInt(pokemonNumber.innerHTML)
+        const shinyData = await fetchPokemon(currentNumber.toString());
+        if (shinyData) {
+            pokemonImage.src = shinyData['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
+        }
     }
 }

@@ -1,3 +1,7 @@
+:root {
+    --white: #ffffff;
+  }
+
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
 *{
@@ -73,7 +77,7 @@ main{
     width: 65%;
     transform: translate(-80%,0);
     display: flex;
-    gap: 20px;
+    gap: 5%;
 }
 
 .button{
@@ -81,7 +85,7 @@ main{
     padding: 1.2%;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: clamp(5px 3vw,13px);
+    font-size: clamp(5px, 3vw,13px);
     font-weight: 600;
     color: white;
     background-color: #444;
@@ -95,7 +99,7 @@ main{
 
 .sbutton {
     position: absolute;
-    bottom: 74%;
+    bottom: 73%;
     left: 84%;
     width: 65%;
     transform: translate(-80%,0);
@@ -105,3 +109,32 @@ main{
     border-radius: 50%;
 }
 
+@media screen and (max-width: 480px) {
+    .button {
+        font-size: 5px;
+        box-shadow: -0.5px 0.5px 0 #222, -2px 3px 0 #000;
+    }
+    .buttons{
+        gap: 5%;
+        width: 50%;
+        left: 56.5%;
+        bottom: 18.2%;
+    }
+    .input_search{
+        width: 70%;
+        box-shadow: -0.5px 0.5px 0 #888, -2px 3px 0 #333;
+        font-size: 7px;
+
+    }
+    .form{
+        top: 64%;
+        left: 11%;
+    }
+    .pokemon_data{
+        padding: 0 0 5px 4px;
+    }
+    .sbutton{
+        width: 50%;
+        left: 75.5%;
+    }
+}
