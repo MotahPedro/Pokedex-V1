@@ -15,4 +15,4 @@
 
 ## O site tambem é totalmente responsivo📱.
 
-## De uma olhada. **LINK**:https://motahpedro.github.io/Pokedex-V1/
+## Dê uma olhada. **LINK**:https://motahpedro.github.io/Pokedex-V1/
