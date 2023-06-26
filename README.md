@@ -16,3 +16,5 @@
 ## O site tambem é totalmente responsivo📱.
 
 ## Dê uma olhada. **LINK**:https://motahpedro.github.io/Pokedex-V1/
+
+## Linkedin: (https://www.linkedin.com/in/pedro-mota-b52327260/)
