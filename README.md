@@ -18,3 +18,5 @@
 ## Dê uma olhada. **LINK**:https://motahpedro.github.io/Pokedex-V1/
 
 ## Linkedin: (https://www.linkedin.com/in/pedro-mota-b52327260/)
+
+## Observação: Aceito sugestões em relação ao problema de posicionamento dos pokemons.
